@@ -1,0 +1,34 @@
+name: Update market data
+
+on:
+  schedule:
+    # Every 30 minutes, Mon–Fri (UTC) — matches the cadence stated in the
+    # site footer. Cron has no sub-minute granularity, and GitHub throttles
+    # very frequent schedules on free accounts, so this is close to the
+    # practical minimum. Adjust to taste.
+    - cron: "*/30 * * * 1-5"
+  workflow_dispatch: {}  # lets you trigger a manual refresh from the Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install yfinance
+
+      - run: python generate_market_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add market_data.json
+          git diff --cached --quiet || git commit -m "Update market data"
+          git push
