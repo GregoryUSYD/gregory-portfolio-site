@@ -190,7 +190,7 @@ h1{font-family:var(--sans); font-weight:700; font-size:clamp(32px, 5vw, 50px); l
 .quote-grid.compact .sparkline{ height:24px; margin-top:6px; }
 
 /* ---------- tombstones (research) ---------- */
-.tombstone-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+.tombstone-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:1px; background:var(--border); border:1px solid var(--border); }
 .tombstone{ background:var(--panel); padding:40px 36px; transition:background 0.25s ease; display:flex; flex-direction:column; }
 .tombstone:hover{background:var(--panel-hover);}
 .ts-status{ font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.12em; color:var(--muted); text-transform:uppercase; display:flex; align-items:center; gap:8px; margin-bottom:22px; }
