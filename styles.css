@@ -139,11 +139,31 @@ section{max-width:1080px; margin:0 auto; padding:80px 32px;}
 .explore-link{ font-family:var(--sans); font-weight:600; font-size:12.5px; color:var(--navy); }
 .explore-card:hover .explore-link{ color:var(--gold); }
 
-/* ---------- hero (about / research) ---------- */
-.hero{max-width:900px; margin:0 auto; padding:70px 32px 20px; text-align:center;}
+/* ---------- hero (research / valuation-models) ---------- */
+.hero{max-width:900px; margin:0 auto; padding:70px 32px 20px; text-align:left;}
 .eyebrow{font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:0.18em; color:var(--navy); text-transform:uppercase; margin-bottom:18px;}
 h1{font-family:var(--sans); font-weight:700; font-size:clamp(32px, 5vw, 50px); line-height:1.15; letter-spacing:-0.01em; color:var(--ink);}
-.hero-sub{max-width:560px; margin:20px auto 0; color:var(--muted); font-size:15.5px;}
+.hero-sub{max-width:560px; margin:20px 0 0; color:var(--muted); font-size:15.5px;}
+
+/* ---------- research list (horizontal rows, no card grid) ---------- */
+.research-list{ border:1px solid var(--border); }
+.research-row{ display:flex; align-items:center; gap:28px; padding:22px 24px; border-bottom:1px solid var(--border); transition:background .2s ease; }
+.research-row:last-child{ border-bottom:none; }
+.research-row:hover{ background:var(--panel-hover); }
+.research-row-main{ width:230px; flex-shrink:0; }
+.research-row-title{ display:block; font-weight:700; font-size:16px; color:var(--ink); margin-bottom:3px; }
+.research-row-role{ display:block; font-size:11.5px; font-weight:600; color:var(--navy); }
+.research-row-desc{ flex:1; font-size:13.5px; color:var(--muted); line-height:1.5; }
+.research-row-link{ flex-shrink:0; font-size:12.5px; font-weight:600; color:var(--ink); white-space:nowrap; }
+.research-row:hover .research-row-link{ color:var(--navy); }
+
+/* ---------- skills (about) ---------- */
+.exec-skills{ margin-top:12px; }
+.exec-skills h2{ font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); margin-bottom:6px; }
+.skills-row{ display:flex; gap:20px; padding:12px 0; border-top:1px solid var(--border); font-size:13.5px; }
+.skills-row:last-child{ border-bottom:1px solid var(--border); }
+.skills-label{ width:110px; flex-shrink:0; font-weight:600; color:var(--ink); }
+.skills-items{ color:var(--muted); line-height:1.5; }
 
 /* ---------- executive bio (about) ---------- */
 .exec-bio{
@@ -189,32 +209,12 @@ h1{font-family:var(--sans); font-weight:700; font-size:clamp(32px, 5vw, 50px); l
 .quote-grid.compact .quote-change{ font-size:11px; }
 .quote-grid.compact .sparkline{ height:24px; margin-top:6px; }
 
-/* ---------- tombstones (research) ---------- */
-.tombstone-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:1px; background:var(--border); border:1px solid var(--border); }
-.tombstone{ background:var(--panel); padding:40px 36px; transition:background 0.25s ease; display:flex; flex-direction:column; }
-.tombstone:hover{background:var(--panel-hover);}
-.ts-status{ font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:0.12em; color:var(--muted); text-transform:uppercase; display:flex; align-items:center; gap:8px; margin-bottom:22px; }
-.ts-status::before{content:''; width:6px; height:6px; background:var(--gold); border-radius:50%; display:inline-block;}
-.ts-title{ font-family:var(--sans); font-size:23px; font-weight:700; margin-bottom:6px; letter-spacing:-0.01em; color:var(--ink); }
-.ts-role{ font-family:var(--sans); font-size:12px; font-weight:600; color:var(--navy); margin-bottom:20px; letter-spacing:0.02em; }
-.ts-desc{ color:var(--muted); font-size:14.5px; flex-grow:1; margin-bottom:24px; }
-.ts-tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}
-.ts-tag{ font-family:var(--sans); font-size:10.5px; font-weight:600; color:var(--muted); border:1px solid var(--border-strong); padding:4px 9px; letter-spacing:0.03em; }
-.ts-link{ font-family:var(--sans); font-size:12.5px; font-weight:600; color:var(--ink); border-top:1px solid var(--border); padding-top:18px; display:flex; justify-content:space-between; align-items:center; }
-.ts-link:hover{color:var(--navy);}
-
 /* ---------- company list (valuation models) ---------- */
 .company-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:1px; background:var(--border); border:1px solid var(--border); }
 .company-card{ display:block; background:var(--panel); padding:24px 20px; transition:background .2s ease; }
 .company-card:hover{ background:var(--panel-hover); }
 .company-name{ font-family:var(--sans); font-weight:700; font-size:16px; color:var(--ink); margin-bottom:6px; font-variant-numeric:tabular-nums; }
 .company-note{ font-family:var(--sans); font-size:11.5px; color:var(--muted); }
-
-/* ---------- toolkit ---------- */
-.toolkit-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:36px;}
-.toolkit-col h4{ font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:0.1em; color:var(--navy); text-transform:uppercase; margin-bottom:16px; border-bottom:1px solid var(--border); padding-bottom:12px; }
-.toolkit-col ul{list-style:none;}
-.toolkit-col li{font-size:14.5px; color:var(--muted); padding:6px 0;}
 
 /* ---------- about ---------- */
 .about{display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start;}
@@ -237,12 +237,13 @@ footer{ border-top:1px solid var(--border); padding:56px 48px 40px; display:flex
   nav{padding:16px 20px;}
   .nav-links{gap:20px;}
   section{padding:56px 20px;}
-  .tombstone-grid{grid-template-columns:1fr;}
-  .toolkit-grid{grid-template-columns:1fr;}
   .explore-grid{grid-template-columns:1fr;}
   .about{grid-template-columns:1fr;}
   .timeline-row{grid-template-columns:1fr; gap:6px;}
   footer{flex-direction:column; align-items:flex-start;}
   .hero-banner{min-height:420px;}
   .exec-bio{padding-top:56px;}
+  .research-row{flex-direction:column; align-items:flex-start; gap:8px;}
+  .research-row-main{width:auto;}
+  .skills-row{flex-direction:column; gap:4px;}
 }
