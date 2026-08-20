@@ -131,7 +131,7 @@ section{max-width:1080px; margin:0 auto; padding:80px 32px;}
 }
 
 /* ---------- explore cards (home) ---------- */
-.explore-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+.explore-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
 .explore-card{ display:block; background:var(--panel); padding:32px 28px; transition:background .2s ease; }
 .explore-card:hover{ background:var(--panel-hover); }
 .explore-title{ font-family:var(--sans); font-weight:700; font-size:18px; color:var(--ink); margin-bottom:10px; }

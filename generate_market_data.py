@@ -91,6 +91,7 @@ WATCHLISTS = {
         ["BRK-B", "BRK-B", 2, ""],
         ["V", "V", 2, ""],
         ["WMT", "WMT", 2, ""],
+        ["MRK","MRK",2,""],
         # --- Australian (ASX) names below ---
         ["QAN.AX", "QAN.AX", 2, ""],
         ["CBA.AX", "CBA.AX", 2, ""],
